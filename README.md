@@ -158,6 +158,10 @@ Caso o retorno seja uma lista vazia, o Docker Engine estará pronto para a execu
 
 <img src="https://github.com/ljbitzki/ljbitzki.github.io/blob/master/Screenshot_20250525_143226.png" alt="Import 06" style="float: left; width: 50%; height: auto;">
 
+* No intuito de evitar quaisquer conflitos entre contêiners existentes no computador (caso o retorno anterior não seja uma lista vazia), sugere-se **parar** todos os contêiners que possam estar rodando localmente, para isso, execute em um terminal:
+```bash
+while read CID; do docker stop "${CID}"; done < <( docker ps -a | grep -v 'CONTAINER ID' | awk '{print $1}' )
+```
 
 ---
 
