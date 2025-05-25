@@ -239,11 +239,11 @@ _Note que poucos segundos após o início do ataque, o mesmo foi interrompido. T
 
 #### Utilizando as **Opções 1 e 3 (Appliance de VirtualBox e _remote desktop_ no ambiente em servidor remoto**)
 
-7. Para reiniciar o experimento, pressione Ctrl+C no terminal do comando _iniciar-ataque_ e delete o serviço _DoS_ no Netbox. A remoção do serviço fará o deploy da remoção da regra de bloqueio no firewall do servidor nginx.
+7. Para reiniciar o experimento, pressione Ctrl+C no terminal do comando executado anteriormente (_iniciar-ataque_) e delete o serviço _DoS_ no Netbox. A remoção do serviço fará o deploy da remoção da regra de bloqueio no firewall do servidor nginx.
 
 #### Utilizando a **Opção 2 (Execução de contêineres localmente)**
 
-7. Para reiniciar o experimento, pressione Ctrl+C no terminal do comando _docker exec -it ubuntu-rogue /usr/local/bin/dos.sh_ e delete o serviço _DoS_ no Netbox. A remoção do serviço fará o deploy da remoção da regra de bloqueio no firewall do servidor nginx.
+7. Para reiniciar o experimento, pressione Ctrl+C no terminal do comando executado anteriormente (_docker exec -it ubuntu-rogue /usr/local/bin/dos.sh_) e delete o serviço _DoS_ no Netbox. A remoção do serviço fará o deploy da remoção da regra de bloqueio no firewall do servidor nginx.
 
 ---
 
