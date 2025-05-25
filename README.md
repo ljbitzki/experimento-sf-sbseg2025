@@ -231,7 +231,7 @@ docker exec -it ubuntu-rogue /usr/local/bin/dos.sh
 
 <img src="https://github.com/ljbitzki/ljbitzki.github.io/blob/master/Screenshot_20250525_153002.png" alt="Import 12" style="float: left; width: 50%; height: auto;">
 
-_Note que poucos segundos após o início do ataque, o mesmo foi interrompido. Tão logo o monitoramento percebeu a nomalia no número de acessos, houve a implantação da regra de firewall bloqueando o acesso do IP do atacante._
+_Note que poucos segundos após o início do ataque, o mesmo foi interrompido. Tão logo o monitoramento percebeu a anomalia no número de acessos, houve a implantação da regra de firewall bloqueando o acesso do IP do atacante._
 
 6. No Netbox, recarregue a página e verifique que há um novo serviço para o _device_ container-nginx. Este serviço foi aplicado como regra de firewall com _source_ do IP do atacante assim que o ataque foi identificado.
 
