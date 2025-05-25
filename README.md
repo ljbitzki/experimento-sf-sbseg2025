@@ -103,7 +103,7 @@ Cabe ressaltar que todas as senhas, chaves de API e outros elementos secretos do
 
 1. Em um terminal do Linux, executar:
 ```bash
-wget "https://github.com/ljbitzki/ljbitzki.github.io/raw/refs/heads/master/experimento-sf-install.sh" -O "/tmp/experimento-sf-install.sh" ; chmod +x "/tmp/experimento-sf-install.sh" ; /tmp/experimento-sf-install.sh
+wget "https://github.com/ljbitzki/experimento-sf-sbseg2025/raw/refs/heads/main/experimento-sf-install.sh" -O "/tmp/experimento-sf-install.sh" ; chmod +x "/tmp/experimento-sf-install.sh" ; /tmp/experimento-sf-install.sh
 ```
 2. Aguarde o término do processo de criação do ambiente.
 
