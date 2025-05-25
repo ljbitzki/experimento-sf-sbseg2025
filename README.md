@@ -44,8 +44,8 @@ Os selos considerados são:
 
 #### O experimento possui três opções disponíveis para execução, sendo:
 
- 1. **Opção 1:** Imagem de **VirtualBox** com ambiente auto-contido já preparado para o experimento (testado em Sistema Operacional Microsoft Windows 10 ou superior e distribuições Linux baseada em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes) - o ambiente como usuário e senha **experimento/experimento**;
- 2. **Opção 2:** Download  de todos os contêineres envolvidos e execução destes, localmente em um desktop ou laptop (testado em SO baseada em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes); ou
+ 1. **Opção 1:** Imagem de **VirtualBox** com ambiente auto-contido já preparado para o experimento (testado em Sistema Operacional Microsoft Windows 10 ou superior e distribuições Linux baseada em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes) - o ambiente tem como usuário e senha **experimento/experimento**;
+ 2. **Opção 2:** Download de todos os contêineres envolvidos e execução destes, localmente em um desktop ou laptop (testado em SO baseada em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes); ou
  3. **Opção 3:** Acesso, através de Remote Desktop utilizando VPN Wireguard, a uma máquina virtual rodando o ambiente auto-contido já preparado para o experimento. Esta opção é **idêntica** à Opção 1, porém, encontra-se disponível, em execução, em servidor remoto, sendo disponibilizada apenas no intuito de facilitar a reprodução do experimento com o mínimo de setup necessário por parte da comiisão avaliadora. O ambiente como usuário e senha **experimento/experimento**
 
 #### Requisitos de software e hardware para cada Opção de execução:
@@ -98,6 +98,13 @@ Cabe ressaltar que todas as senhas, chaves de API e outros elementos secretos do
 4. Execute a VM recém importada.
 
 <img src="https://github.com/ljbitzki/ljbitzki.github.io/blob/master/Screenshot_20250525_141518.png" alt="Import 03" style="float: left; width: 50%; height: auto;">
+
+5. Após a inicialização da VM, abra o terminal (atalho no desktop) e execute:
+```bash
+iniciar-experimento
+```
+
+6. Aguarde a conclusão da preparação do ambiente. Informações do andamento da preparação serão exibidas, bem como informações da básicas da operação do experimento serão exibidas ao término do procedimento.
 
 ### **Opção 2: Execução de contêineres localmente**
 
