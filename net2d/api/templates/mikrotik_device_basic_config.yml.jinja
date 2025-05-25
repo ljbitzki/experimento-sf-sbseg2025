@@ -1,0 +1,19 @@
+---
+- name: RouterOS test with API
+  hosts: localhost
+  gather_facts: true
+  vars:
+  vars_files:
+  module_defaults:
+    group/community.routeros.api:
+      hostname: {{ hostname }}
+      password: admin
+      username: admin
+      tls: false
+
+  tasks:
+  - name: Set Device Name
+    community.routeros.api_modify:
+      path: "system identity"
+      data:
+        - name: {{ device_name }}

@@ -1,0 +1,13 @@
+{% extends "base-iptables.yml.jinja" %}
+{% block tasks %}
+  - name: Remove regra simples
+    ansible.builtin.iptables:
+      chain: INPUT
+      protocol: {{ protocol }}
+      destination_port: {{ ports }}
+      source: {{ source }}
+      comment: {{ comments }}
+      chain_management: true
+      state: absent
+      jump: {{ tag }}
+{% endblock %}

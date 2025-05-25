@@ -1,0 +1,16 @@
+{% extends "base-playbook.yml.jinja" %}
+{% block tasks %}
+  {% if ip_addresses %}
+  - name: Configure IP Adresses
+    community.routeros.api_modify:
+      path: "ip address"
+      handle_absent_entries: remove
+      handle_entries_content: remove_as_much_as_possible
+      data:
+        
+        {% for ip in ip_addresses%}
+        - address: {{ ip["address"] }}
+          interface: {{ ip["interface"] }}
+        {% endfor %}
+  {% endif %}
+{% endblock %}
