@@ -1,0 +1,11 @@
+{% extends "base-iptables.yml.jinja" %}
+{% block tasks %}
+  - name: Copy persistent rules to file 
+    ansible.builtin.copy:
+      src: /app/api/playbooks/services_{{ device_id }}.yml
+      dest: /etc/default/net2d_rules.fw
+      mode: '0644'
+  - name: Restart firewall
+    ansible.builtin.command:
+      cmd: /etc/init.d/firewall restart
+{% endblock %}

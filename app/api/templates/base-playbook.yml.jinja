@@ -1,0 +1,13 @@
+---
+- name: RouterOS test with API
+  hosts: localhost
+  gather_facts: true
+  module_defaults:
+    group/community.routeros.api:
+      hostname: {{ hostname }}
+      password: admin
+      username: admin
+      tls: false
+
+  tasks:  
+  {% block tasks %}{% endblock %}
