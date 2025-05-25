@@ -1,2 +1,0 @@
-iptables -A INPUT -p {{ protocol }} -s {{ source }} -d 0.0.0.0/0 --dport {{ ports }} -j ACCEPT -m comment --comment "{{ comments }}"
-{{ new_line }}
