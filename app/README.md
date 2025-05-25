@@ -1,6 +1,7 @@
 # App
 
 #### Estrutura da aplicação:
+```bash
 .
 ├── api
 │   ├── admin.py
@@ -41,3 +42,4 @@
 │   ├── admin
 │   └── rest_framework
 └── sudoers
+```
