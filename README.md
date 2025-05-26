@@ -161,7 +161,7 @@ while read CID; do docker stop "${CID}"; done < <( docker ps -a | grep -v 'CONTA
 
 ## Reivindicações: Cenário 1 - Liberação automatizada de porta quando serviço estiver pronto
 
-### **Opção 1: Appliance de VirtualBox**
+#### **Opção 1: Appliance de VirtualBox**
 
 Abrir o terminal e executar o alias que verifica o estado do iptables do servidor:
 
@@ -169,7 +169,7 @@ Abrir o terminal e executar o alias que verifica o estado do iptables do servido
 verificar-firewall-servidor
 ```
 
-### **Opção 2: Execução de contêineres localmente**
+#### **Opção 2: Execução de contêineres localmente**
 
 Abrir o terminal e executar o comando para inspecionar o estado do iptables do servidor:
 
@@ -183,11 +183,11 @@ Observar a implantação da regra de firewall permitindo o acesso à porta 80 t�
 
 ## Reivindicações: Cenário 2 - Mitigação automatizada de ataque DoS
 
-### **Opção 1: Appliance de VirtualBox**
+#### **Opção 1: Appliance de VirtualBox**
 
 1. Abrir no navegador **da máquina virtual** o [Netbox](http://localhost:8080/ipam/services/) e o [Grafana](http://localhost:3000/public-dashboards/7d7b1678f7e94829a1816723c251e934?refresh=auto)
 
-### **Opção 2: Execução de contêineres localmente**
+#### **Opção 2: Execução de contêineres localmente**
 
 1. Abrir no navegador do host que está executando os contêineres o [Netbox](http://localhost:8080/ipam/services/) e o [Grafana](http://localhost:3000/public-dashboards/7d7b1678f7e94829a1816723c251e934?refresh=auto)
 
@@ -201,7 +201,7 @@ Note que em ambos casos o Netbox tem como usuário e senha **admin/admin**
 
 <img src="https://github.com/ljbitzki/ljbitzki.github.io/blob/master/Screenshot_20250525_152616.png" alt="Import 11" style="float: left; width: 50%; height: auto;">
 
-### **Opção 1: Appliance de VirtualBox**
+#### **Opção 1: Appliance de VirtualBox**
 
 4. Abrir um novo terminal e executar o alias para simular um ataque:
 
@@ -209,7 +209,7 @@ Note que em ambos casos o Netbox tem como usuário e senha **admin/admin**
 iniciar-ataque
 ```
 
-### **Opção 2: Execução de contêineres localmente**
+#### **Opção 2: Execução de contêineres localmente**
 
 4. Abrir um novo terminal e executar o comando para simular um ataque:
 
@@ -227,11 +227,11 @@ _Note que poucos segundos após o início do ataque, o mesmo foi interrompido. T
 
 <img src="https://github.com/ljbitzki/ljbitzki.github.io/blob/master/Screenshot_20250525_153354.png" alt="Import 13" style="float: left; width: 50%; height: auto;">
 
-### **Opção 1: Appliance de VirtualBox**
+#### **Opção 1: Appliance de VirtualBox**
 
 7. Para reiniciar o experimento, pressione Ctrl+C no terminal do comando executado anteriormente (_iniciar-ataque_) e delete o serviço _DoS_ no Netbox. A remoção do serviço fará o deploy da remoção da regra de bloqueio no firewall do servidor nginx.
 
-### **Opção 2: Execução de contêineres localmente**
+#### **Opção 2: Execução de contêineres localmente**
 
 7. Para reiniciar o experimento, pressione Ctrl+C no terminal do comando executado anteriormente (_docker exec -it ubuntu-rogue /usr/local/bin/dos.sh_) e delete o serviço _DoS_ no Netbox. A remoção do serviço fará o deploy da remoção da regra de bloqueio no firewall do servidor nginx.
 
