@@ -44,13 +44,13 @@ Os selos considerados são:
 
 #### O experimento possui duas opções disponíveis para execução, sendo:
 
- 1. **Opção 1:** Imagem de **VirtualBox** com ambiente auto-contido já preparado para o experimento (testado em Sistema Operacional Microsoft Windows 10 ou superior e distribuições Linux baseada em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes) - o ambiente tem como usuário e senha **experimento/experimento**;
- 2. **Opção 2:** Download de todos os contêineres envolvidos e execução destes, localmente em um desktop ou laptop (testado em SO baseada em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes); ou
+ 1. **Opção 1:** Imagem de **VirtualBox** com ambiente auto-contido já preparado para o experimento (testado em Sistema Operacional Microsoft Windows 10 ou superior e distribuições Linux baseada em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes) - o ambiente tem como usuário e senha **experimento/experimento**; ou
+ 2. **Opção 2:** Download de todos os contêineres envolvidos e execução destes, localmente em um desktop ou laptop (testado em SO baseada em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes).
  
 #### Requisitos de software e hardware para cada Opção de execução:
 
- 1. **Opção 1:** Nesta opção, deve ser feito o download e importação de um Appliance Virtual (arquivo .ova) e execução do ambiente virtualizado utilizando VirtualBox. Para tanto, são necessários: Sistema Operacional Microsoft Windows 10 ou superior e distribuições Linux baseada em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes), processador 64 bits com no mínimo 4 núcleos e flag de virtualzação VT-x ativada na BIOS, 4GB de memória RAM para uso exclusivo no experimento, VirtualBox 7.1 ou superior com Extension Pack correspondente à versão do VirtualBox.
- 2. **Opção 2:** Nesta opção, todo experimento será executado em ambiente local através do download e execução automatizada de todos os componentes utilizando Docker. Para isto, são necessários: Sistema Operacional Linux baseado em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes), processador 64 bits com no mínimo 4 núcleos, 4GB de memória RAM para uso exclusivo no experimento, Docker Engine versão 26 ou superior e alguns pacotes disponíveis no repositório oficial (ver dependências); ou
+ 1. **Opção 1:** Nesta opção, deve ser feito o download e importação de um Appliance Virtual (arquivo .ova) e execução do ambiente virtualizado utilizando VirtualBox. Para tanto, são necessários: Sistema Operacional Microsoft Windows 10 ou superior e distribuições Linux baseada em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes), processador 64 bits com no mínimo 4 núcleos e flag de virtualzação VT-x ativada na BIOS, 4GB de memória RAM para uso exclusivo no experimento, VirtualBox 7.1 ou superior com Extension Pack correspondente à versão do VirtualBox; ou
+ 2. **Opção 2:** Nesta opção, todo experimento será executado em ambiente local através do download e execução automatizada de todos os componentes utilizando Docker. Para isto, são necessários: Sistema Operacional Linux baseado em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes), processador 64 bits com no mínimo 4 núcleos, 4GB de memória RAM para uso exclusivo no experimento, Docker Engine versão 26 ou superior e alguns pacotes disponíveis no repositório oficial (ver dependências).
  
 ---
 
@@ -72,7 +72,7 @@ Os selos considerados são:
 
 #### Preocupações adicionais a com segurança
 
-Cabe ressaltar que todas as senhas, chaves de API e outros elementos secretos dos componentes foram gerados para o propósito da demonstração do experimento, de tal forma que sua força de segurança foram propositalmente baixadas para facilitar o experimento. As senhas, chaves de API e chaves RSA do SSH utilizada são descartáveis e servem apenas ao propósito do experimento.
+Cabe ressaltar que todas as senhas, chaves de API e outros elementos secretos dos componentes foram gerados para apenas para a demonstração do experimento, de tal forma que sua força de segurança foram propositalmente baixadas para facilitar o experimento. As senhas, chaves de API e chaves RSA do SSH utilizada são descartáveis e servem apenas ao propósito do experimento.
 
 ---
 
