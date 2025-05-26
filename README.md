@@ -1,7 +1,7 @@
 # TrueState-SNA: Orquestração Segura e Declarativa de Firewalls Baseada em Fonte Única de Verdade
 [![Licença](https://img.shields.io/badge/License-GNU%20GPL-blue)](https://opensource.org/licenses/GNU)
 ### Objetivo do Artefato:
-Este artefato tem como objetivo exemplificar o funcionamento prático de um cenário real de aplicação do **TrueState-SNA**, em que dois cenários são simulados e a execução das funcionalidades são demonstradas.
+Este artefato tem como objetivo exemplificar o funcionamento prático de um cenário real de aplicação do **TrueState-SNA**, em que duas reivindicações são simuladas e a execução destas são demonstradas.
 
 **No primeiro cenário**, quando um servidor web é iniciado e fica pronto para aceitar requisições, um mecanismo interno no servidor aciona a API do **TrueState-SNA**, que processa a informação e cria um serviço do tipo ACCEPT na SSoT, que por sua vez aciona de volta a API e desencadeia a criação de uma regra de **iptables** para liberação de porta 80 no servidor, permitindo que ele seja acessado.
 
