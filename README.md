@@ -42,37 +42,33 @@ Os selos considerados são:
 
 # Informações básicas
 
-#### O experimento possui três opções disponíveis para execução, sendo:
+#### O experimento possui duas opções disponíveis para execução, sendo:
 
  1. **Opção 1:** Imagem de **VirtualBox** com ambiente auto-contido já preparado para o experimento (testado em Sistema Operacional Microsoft Windows 10 ou superior e distribuições Linux baseada em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes) - o ambiente tem como usuário e senha **experimento/experimento**;
  2. **Opção 2:** Download de todos os contêineres envolvidos e execução destes, localmente em um desktop ou laptop (testado em SO baseada em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes); ou
- 3. **Opção 3:** Acesso, através de Remote Desktop utilizando VPN Wireguard, a uma máquina virtual rodando o ambiente auto-contido já preparado para o experimento. Esta opção é **idêntica** à Opção 1, porém, encontra-se disponível, em execução, em servidor remoto, sendo disponibilizada apenas no intuito de facilitar a reprodução do experimento com o mínimo de setup necessário por parte da comiisão avaliadora. O ambiente como usuário e senha **experimento/experimento**
-
+ 
 #### Requisitos de software e hardware para cada Opção de execução:
 
  1. **Opção 1:** Nesta opção, deve ser feito o download e importação de um Appliance Virtual (arquivo .ova) e execução do ambiente virtualizado utilizando VirtualBox. Para tanto, são necessários: Sistema Operacional Microsoft Windows 10 ou superior e distribuições Linux baseada em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes), processador 64 bits com no mínimo 4 núcleos e flag de virtualzação VT-x ativada na BIOS, 4GB de memória RAM para uso exclusivo no experimento, VirtualBox 7.1 ou superior com Extension Pack correspondente à versão do VirtualBox.
  2. **Opção 2:** Nesta opção, todo experimento será executado em ambiente local através do download e execução automatizada de todos os componentes utilizando Docker. Para isto, são necessários: Sistema Operacional Linux baseado em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes), processador 64 bits com no mínimo 4 núcleos, 4GB de memória RAM para uso exclusivo no experimento, Docker Engine versão 26 ou superior e alguns pacotes disponíveis no repositório oficial (ver dependências); ou
- 3. **Opção 3:** Nesta opção, o ambiente do experimento estará em execução em servidor remoto, em que apenas será necessário o acesso ao desktop virtual deste servidor para sua a execução. Esta opção requer: Sistema Operacional Microsoft Windows 10 ou superior e distribuições Linux baseada em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes, aplicação de remote desktop e cliente de VPN Wireguard.
-
+ 
 ---
 
 # Dependências
 
-#### O experimento possui três opções disponíveis para execução, tendo cada um deles as seguintes dependências:
+#### O experimento possui duas opções disponíveis para execução, tendo cada uma delas as seguintes dependências:
 
  1. **Opção 1:** Cumpridos os requisitos descritos na seção anterior, referentes a **Opção 1**, esta opção não possui dependências.
  2. **Opção 2:** Cumpridos os requisitos descritos na seção anterior, referentes a **Opção 2**, é necessário certificar-se que o Docker Engine versão 26 ou superior esteja instalado conforme descrito na [página oficial da ferramenta](https://docs.docker.com/engine/install/ubuntu/), bem como a seção [postinstall](https://docs.docker.com/engine/install/linux-postinstall/), além dos pacotes __curl__, __rsync__, __wget__ e __git__ instalados.
- 3. **Opção 3:** Em Sistema Operacional Linux baseado em Ubuntu versão 20.04 ou mais recente: Ubuntu, Kubuntu, Xubuntu e variantes, é necessário a instalação de aplicação com capacidade de execução RDP (sugere-se xrdp, vinagre ou remmina). Em Sistema Operacional Microsoft Windows 10 ou superior a aplicação RDP é nativa (_mstsc_). Em ambos sistemas operacionais, é requisito a instalação de [cliente de VPN Wireguard](https://www.wireguard.com/install/)
 
 ---
 
 # Preocupações com segurança
 
-#### O experimento possui três opções disponíveis para execução, tendo cada um deles as seguintes preocupações com segurança:
+#### O experimento possui duas opções disponíveis para execução, tendo cada uma delas as seguintes preocupações com segurança:
 
  1. **Opção 1:** Por tratar-se de execução de Appliance pronta e virtualizada em ambiente auto contido, não há considerações quanto a preocupações de segurança nesta opção.
  2. **Opção 2:** Durante a execução do conjunto de contêineres envolvidos, dependendo das configurações do dispositivo que estiver hospedando o experimento, as portas **3000**, **8000** e **8080** poderão estar abertas para a rede local, dependendo das configurações de firewall, encaminhamento de portas e perfil de segurança das interfaces de rede. 
- 3. **Opção 3:** Por tratar-se de ambiente auto contido e sendo executado em servidor remoto, as implicações de segurança são inerente ao vazamento das credenciais da VPN e do acesso ao servidor. As ações de contenção do ambiente para a proteção do sistema operacional remoto foram tratadas em nível de redução de privilégios, restrição do uso da rede para acesso somente à rede local exclusiva do host e mecanismo de auto destruição e recuperação para o estado anterior, caso necessário.
 
 #### Preocupações adicionais a com segurança
 
@@ -82,7 +78,7 @@ Cabe ressaltar que todas as senhas, chaves de API e outros elementos secretos do
 
 # Instalação
 
-#### O experimento possui três opções disponíveis para execução, tendo cada um deles as seguintes etapas de instalação:
+#### O experimento possui duas opções disponíveis para execução, tendo cada uma delas as seguintes etapas de instalação:
 
 ### **Opção 1: Appliance de VirtualBox**
 
@@ -116,19 +112,13 @@ wget "https://github.com/ljbitzki/experimento-sf-sbseg2025/raw/refs/heads/main/e
 
 _(Caso alguma dependência ou requisito anteriormente descrito não tenham sido cumpridos, o script de instalação apresentará em tela as opções de resolução dos elementos faltantes)_
 
-### **Opção 3: Acesso _remote desktop_ ao ambiente em servidor remoto**
-
-1. Em avaliação de viabilidade
-2. Em avaliação de viabilidade
-3. Em avaliação de viabilidade
-
 ---
 
 # Teste mínimo
 
-#### O experimento possui três opções disponíveis para execução, tendo cada um deles os seguintes testes mínimos:
+#### O experimento possui duas opções disponíveis para execução, tendo cada uma delas os seguintes testes mínimos:
 
-### **Opções 1 e 3: (Appliance de VirtualBox Acesso _remote desktop_ ao ambiente em servidor remoto)**
+### **Opção 1: Appliance de VirtualBox**
 
 Estando na máquina virtual recém importada, abrir o terminal e executar:
 
@@ -167,11 +157,11 @@ while read CID; do docker stop "${CID}"; done < <( docker ps -a | grep -v 'CONTA
 
 # Experimentos
 
-#### O experimento possui três opções disponíveis para execução, tendo cada um deles os seguintes etapas para a obtenção das reivindicações:
+#### O experimento possui duas opções disponíveis para execução, tendo cada uma delas os seguintes etapas para a obtenção das reivindicações:
 
 ## Reivindicações: Cenário 1 - Liberação automatizada de porta quando serviço estiver pronto
 
-#### Utilizando as **Opções 1 e 3 (Appliance de VirtualBox e _remote desktop_ no ambiente em servidor remoto**)
+### **Opção 1: Appliance de VirtualBox**
 
 Abrir o terminal e executar o alias que verifica o estado do iptables do servidor:
 
@@ -179,7 +169,7 @@ Abrir o terminal e executar o alias que verifica o estado do iptables do servido
 verificar-firewall-servidor
 ```
 
-#### Utilizando a **Opção 2 (Execução de contêineres localmente)**
+### **Opção 2: Execução de contêineres localmente**
 
 Abrir o terminal e executar o comando para inspecionar o estado do iptables do servidor:
 
@@ -193,11 +183,11 @@ Observar a implantação da regra de firewall permitindo o acesso à porta 80 t�
 
 ## Reivindicações: Cenário 2 - Mitigação automatizada de ataque DoS
 
-#### Utilizando as **Opções 1 e 3 (Appliance de VirtualBox e _remote desktop_ no ambiente em servidor remoto**)
+### **Opção 1: Appliance de VirtualBox**
 
 1. Abrir no navegador **da máquina virtual** o [Netbox](http://localhost:8080/ipam/services/) e o [Grafana](http://localhost:3000/public-dashboards/7d7b1678f7e94829a1816723c251e934?refresh=auto)
 
-#### Utilizando a **Opção 2 (Execução de contêineres localmente)**
+### **Opção 2: Execução de contêineres localmente**
 
 1. Abrir no navegador do host que está executando os contêineres o [Netbox](http://localhost:8080/ipam/services/) e o [Grafana](http://localhost:3000/public-dashboards/7d7b1678f7e94829a1816723c251e934?refresh=auto)
 
@@ -211,7 +201,7 @@ Note que em ambos casos o Netbox tem como usuário e senha **admin/admin**
 
 <img src="https://github.com/ljbitzki/ljbitzki.github.io/blob/master/Screenshot_20250525_152616.png" alt="Import 11" style="float: left; width: 50%; height: auto;">
 
-#### Utilizando as **Opções 1 e 3 (Appliance de VirtualBox e _remote desktop_ no ambiente em servidor remoto**)
+### **Opção 1: Appliance de VirtualBox**
 
 4. Abrir um novo terminal e executar o alias para simular um ataque:
 
@@ -219,7 +209,7 @@ Note que em ambos casos o Netbox tem como usuário e senha **admin/admin**
 iniciar-ataque
 ```
 
-#### Utilizando a **Opção 2 (Execução de contêineres localmente)**
+### **Opção 2: Execução de contêineres localmente**
 
 4. Abrir um novo terminal e executar o comando para simular um ataque:
 
@@ -237,11 +227,11 @@ _Note que poucos segundos após o início do ataque, o mesmo foi interrompido. T
 
 <img src="https://github.com/ljbitzki/ljbitzki.github.io/blob/master/Screenshot_20250525_153354.png" alt="Import 13" style="float: left; width: 50%; height: auto;">
 
-#### Utilizando as **Opções 1 e 3 (Appliance de VirtualBox e _remote desktop_ no ambiente em servidor remoto**)
+### **Opção 1: Appliance de VirtualBox**
 
 7. Para reiniciar o experimento, pressione Ctrl+C no terminal do comando executado anteriormente (_iniciar-ataque_) e delete o serviço _DoS_ no Netbox. A remoção do serviço fará o deploy da remoção da regra de bloqueio no firewall do servidor nginx.
 
-#### Utilizando a **Opção 2 (Execução de contêineres localmente)**
+### **Opção 2: Execução de contêineres localmente**
 
 7. Para reiniciar o experimento, pressione Ctrl+C no terminal do comando executado anteriormente (_docker exec -it ubuntu-rogue /usr/local/bin/dos.sh_) e delete o serviço _DoS_ no Netbox. A remoção do serviço fará o deploy da remoção da regra de bloqueio no firewall do servidor nginx.
 
