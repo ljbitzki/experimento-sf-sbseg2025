@@ -197,7 +197,7 @@ Note que em ambos casos o Netbox tem como usuário e senha **admin/admin**
 
 <img src="https://github.com/ljbitzki/ljbitzki.github.io/blob/master/Screenshot_20250525_152105.png" alt="Import 10" style="float: left; width: 50%; height: auto;">
 
-3. No Grafana, observar a baixa contagem de acessos. Os contêineres ubuntu-client e ubuntu-rogue possuem scripts que acessam o contêiner ubuntu-server aleatoriamente de 1 a 9 vezes por segundo, simulando acessos considerados normais.
+3. No Grafana, observar a baixa contagem de acessos. Os contêineres ubuntu-client e ubuntu-rogue possuem scripts que acessam o contêiner ubuntu-server aleatoriamente de 1 a 9 vezes por segundo, simulando acessos considerados normais, demonstrando que o contêiner com o servidor nginx encontra-se acessível.
 
 <img src="https://github.com/ljbitzki/ljbitzki.github.io/blob/master/Screenshot_20250525_152616.png" alt="Import 11" style="float: left; width: 50%; height: auto;">
 
